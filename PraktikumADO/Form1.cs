@@ -117,7 +117,7 @@ namespace PraktikumADO
             }
         }
 
-        private void button1_Click(object sender, EventArgs e)
+        private void btnHitungDosen_Click(object sender, EventArgs e)
         {
             try
             {
@@ -140,20 +140,19 @@ namespace PraktikumADO
             }
         }
 
-        private void btnHitungDosen_Click(object sender, EventArgs e)
+        private void btnUpdateMK_Click(object sender, EventArgs e)
         {
             try
             {
                 Koneksi();
                 conn.Open();
-
-                string query = "SELECT COUNT(*) FROM Dosen";
+                string query = "UPDATE MataKuliah SET SKS='4' WHERE KodeMK = 'IF210101'";
 
                 cmd = new SqlCommand(query, conn);
 
-                int jumlah = (int)cmd.ExecuteScalar();
+                int hasil = cmd.ExecuteNonQuery();
 
-                txtHasil.Text = jumlah.ToString();
+                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
 
                 conn.Close();
             }
