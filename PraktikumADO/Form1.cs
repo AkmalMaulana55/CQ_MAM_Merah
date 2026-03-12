@@ -174,7 +174,7 @@ namespace PraktikumADO
 
                 int hasil = cmd.ExecuteNonQuery();
 
-                MessageBox.Show("Jumlah baris terpengaruh : " + hasil);
+                MessageBox.Show("Data Telah berhasil ditambahkan, jumlah baris terpengaruh : " + hasil);
 
                 conn.Close();
             }
