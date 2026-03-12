@@ -21,6 +21,12 @@ namespace PraktikumADO
             InitializeComponent();
         }
 
+        private void Koneksi()
+        {
+            conn = new SqlConnection(
+                "Data Source=MYBOOKHYPE\\AKMALSQL;Initial Catalog=DBAkademikADO;Integrated Security=True"
+                );
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
 
